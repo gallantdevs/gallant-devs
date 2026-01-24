@@ -26,10 +26,10 @@ const Hero = () => {
             Web Designer • Developer • AI Developer
         </p>
 
-        <button
+        <a
             className="
             relative mt-4 px-8 py-3
-            text-sm font-semibold tracking-wide italic
+            text-md font-semibold tracking-wide italic
             text-white
             bg-[#0e100f]
             rounded-lg
@@ -40,9 +40,10 @@ const Hero = () => {
             hover:shadow-[0_12px_35px_rgba(218,165,32,0.35)]
             focus:outline-none
             "
+            href={`#contact`}
         >
             Get a quote
-        </button>
+        </a>
         </div>
 
     </section>
