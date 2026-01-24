@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
+import logo from '../../public/logo.png'
 
 const navItems = ["About", "Services", "Work", "Blog", "Contact"];
 
@@ -50,7 +51,7 @@ const NavBar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           {/* Branding */}
           <div className="flex items-center gap-2 cursor-pointer">
-            <img src="/logo.png" alt="logo" className="w-8" />
+            <img src={logo} alt="logo" className="w-8" />
             <h1 className="logo font-semibold text-lg uppercase text-[#C69C49]">
               Gallant Devs
             </h1>
