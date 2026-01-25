@@ -99,7 +99,7 @@ const NavBar = () => {
       </header>
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden absolute top-20 inset-x-0 w-full  bg-black/90 backdrop-blur-md transition-all duration-500 ${
+        className={`md:hidden absolute top-20 inset-x-0 w-full  backdrop-blur-lg transition-all duration-500 ${
           isMobileOpen ? "max-h-96 opacity-100 visible" : "max-h-0 opacity-0 invisible"
         }`}
       >
