@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import img7 from "../../public/7.jpg";
+// import img7 from "../../public/7.jpg";
+import img7 from "../../public/K.jpeg";
 
 const PROJECT_TYPES = [
   "Web Development",

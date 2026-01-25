@@ -1,6 +1,11 @@
-import img4 from '../../public/4.png'
-import img5 from '../../public/5.png'
-import img6 from '../../public/6.png'
+// import img4 from '../../public/4.png'
+// import img5 from '../../public/5.png'
+// import img6 from '../../public/6.png'
+
+import img4 from '../../public/H.jpeg'
+import img5 from '../../public/I.jpeg'
+import img6 from '../../public/J.jpeg'
+
 const Services = () => {
   return (
     <section
@@ -18,8 +23,7 @@ const Services = () => {
           Services
         </h2>
         <p className="text-base md:text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-          Comprehensive digital solutions tailored to elevate your brand and
-          drive meaningful results.
+          Comprehensive digital services designed to strengthen your brand and deliver measurable outcomes.
         </p>
       </header>
 
@@ -44,9 +48,7 @@ const Services = () => {
               Web Design &amp; User Experience
             </h3>
             <p className="text-base md:text-lg text-zinc-300 mb-6 leading-relaxed max-w-xl">
-              Crafting intuitive and visually compelling user experiences that
-              captivate and convert. Every design decision is backed by research
-              and modern design principles.
+              Designing intuitive, visually refined user experiences that engage users and drive conversions. Every decision is guided by research, usability principles, and modern design systems.
             </p>
             <ul className="space-y-2 text-sm md:text-base text-zinc-400">
               <li><span className="text-[#DAA520] mr-2">•</span>UI/UX Strategy &amp; Research</li>
@@ -64,8 +66,7 @@ const Services = () => {
               Full-Stack Web Development
             </h3>
             <p className="text-base md:text-lg text-zinc-300 mb-6 leading-relaxed max-w-xl">
-              Building robust, scalable web applications using cutting-edge
-              technologies — from concept to deployment.
+              Developing reliable, scalable web applications using proven technologies, covering everything from planning to deployment and long-term stability.
             </p>
             <ul className="space-y-2 text-sm md:text-base text-zinc-400">
               <li><span className="text-[#DAA520] mr-2">•</span>Frontend (React, Next.js)</li>
@@ -110,8 +111,7 @@ const Services = () => {
               AI Engineering &amp; Integration
             </h3>
             <p className="text-base md:text-lg text-zinc-300 mb-6 leading-relaxed max-w-xl">
-              Integrating intelligent systems to build smarter, more personalized
-              digital experiences.
+              Implementing intelligent systems that enhance products through automation, personalization, and data-driven decision making.
             </p>
             <ul className="space-y-2 text-sm md:text-base text-zinc-400">
               <li><span className="text-[#DAA520] mr-2">•</span>AI-Powered Applications</li>

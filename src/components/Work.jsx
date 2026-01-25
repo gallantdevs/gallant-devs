@@ -1,28 +1,30 @@
+import { img } from 'framer-motion/client';
+import imgL from '../../public/L.jpeg'
 export default function Work() {
   const projects = [
     {
       title: "AI SaaS Platform",
       desc: "Smart automation powered by machine intelligence.",
       tech: "Next.js • OpenAI • Tailwind",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+      image: imgL,
     },
     {
       title: "E-Commerce Experience",
       desc: "High-conversion modern storefront.",
       tech: "React • Stripe • Framer",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+      image: imgL,
     },
     {
       title: "Analytics Dashboard",
       desc: "Insightful data visualization at scale.",
       tech: "Next.js • D3 • PostgreSQL",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+      image: imgL,
     },
     {
       title: "Portfolio Website",
       desc: "Minimal, fast, and elegant personal brand.",
       tech: "Next.js • Tailwind • Motion",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+      image: imgL,
     },
   ];
 

@@ -1,6 +1,9 @@
-import img1 from '../../public/1.png'
-import img2 from '../../public/2.png'
-import img3 from '../../public/3.jpeg' 
+// import img1 from '../../public/1.png'
+// import img2 from '../../public/2.png'
+// import img3 from '../../public/3.jpeg' 
+import img1 from '../../public/A.jpeg'
+import img2 from '../../public/B.jpeg'
+import img3 from '../../public/C.jpeg' 
 
 const About = () => {
   return (
@@ -42,17 +45,11 @@ const About = () => {
     >
       <article className="space-y-6 md:space-y-8">
         <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500">
-          I am a creator, an innovator, and a disruptor of the digital realm. With
-          over 3 years of experience in web development and AI integration, I
-          transform ambitious ideas into powerful digital experiences that leave
-          lasting impressions.
+          I am a builder, a strategist, and a problem-solver in the digital space. With over three years of experience in web development and applied AI systems, I turn ambitious concepts into reliable digital products that create real, measurable impact.
         </p>
 
         <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500">
-          My passion is to build digital experiences that not only meet your
-          business goals but exceed your wildest expectations. I believe in the
-          power of technology to revolutionize industries and create meaningful
-          connections between brands and their audiences.
+          My focus is crafting digital solutions that align with business objectives and deliver long-term value. I believe technology should simplify complexity, strengthen brands, and create meaningful connections between companies and their audiences
         </p>
 
         <figure className="aspect-[4/3] bg-zinc-800 rounded-lg overflow-hidden hover-lift">
@@ -93,16 +90,11 @@ const About = () => {
         </figure>
 
         <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500">
-          My approach is to build digital experiences that not only meet your
-          business goals but exceed your wildest expectations. I believe in the
-          power of technology to revolutionize industries and create meaningful
-          connections.
+          My approach is to design digital products that not only achieve your business goals but scale with them. I believe in using technology thoughtfully to modernize workflows and unlock new opportunities.
         </p>
 
         <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500">
-          From concept to deployment, I ensure every pixel serves a purpose and
-          every interaction tells your story. Let's create something
-          extraordinary together.
+          From strategy to deployment, every detail is intentional and every interaction is purposeful. Let’s collaborate to build something refined, effective, and built to last.
         </p>
 
         <figure className="aspect-square bg-zinc-800 rounded-lg overflow-hidden hover-lift">

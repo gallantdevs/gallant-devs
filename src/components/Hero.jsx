@@ -1,12 +1,24 @@
-import Background from '../../public/Background.mp4'
+// import Background from '../../public/Background.mp4'
+import { useMemo } from "react";
+import A1 from "../../public/A1.mp4";
+import A2 from "../../public/A2.mp4";
+import A3 from "../../public/A3.mp4";
+import A4 from "../../public/A4.mp4";
+
+const videos = [A1, A2, A3, A4];
 
 const Hero = () => {
+  const randomVideo = useMemo(
+    () => videos[Math.floor(Math.random() * videos.length)],
+    []
+  );
   return (
     <section className='w-full h-screen relative overflow-hidden'>
         {/* Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover "
-        src={Background}
+        // src={Background}
+        src={randomVideo}
         autoPlay
         muted
         loop
@@ -17,10 +29,15 @@ const Hero = () => {
 
       {/* Optional content on top */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 text-center">
-        <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
+        {/* <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
             Building the <em className="italic text-white">future</em>, one paradigm{" "}
             <em className="italic text-white">shift at a time</em>
+        </h1> */}
+        <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
+          Engineering <em className="italic text-white">digital experiences</em>, one{" "}
+          <em className="italic text-white">breakthrough</em> at a time
         </h1>
+
 
         <p className="text-sm md:text-base font-medium tracking-widest text-zinc-400 uppercase">
             Web Designer • Developer • AI Developer

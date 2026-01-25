@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
 html{
@@ -9,11 +10,13 @@ html{
     scroll-behavior: smooth;
 }
 .logo {
-    font-family: "Orbitron", sans-serif;
+    /* font-family: "Orbitron", sans-serif; */
+    font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     @apply text-[#DAA520];
 }
 
 @utility floating-nav {
-  @apply bg-black rounded-lg border;
+  /* @apply bg-black rounded-lg border; */
+  @apply backdrop-blur-sm rounded-lg border;
 }

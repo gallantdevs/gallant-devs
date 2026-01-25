@@ -40,9 +40,16 @@ const Pricing = () => {
                     Priority delivery timeline
                   </p>
                 </div>
-                <div className="h-6 w-11 rounded-full bg-zinc-600 flex items-center px-1">
-                  <span className="h-4 w-4 rounded-full bg-black translate-x-1" />
-                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" />
+
+                  <div className="w-11 h-6 bg-zinc-400 rounded-full peer-checked:bg-black transition-colors"></div>
+
+                  <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full
+                              transition-transform peer-checked:translate-x-5"></div>
+                </label>
+
+
               </div>
 
               <div className="flex items-baseline mb-6">
@@ -96,9 +103,14 @@ const Pricing = () => {
                     Priority delivery timeline
                   </p>
                 </div>
-                <div className="h-6 w-11 rounded-full bg-zinc-600 flex items-center px-1">
-                  <span className="h-4 w-4 rounded-full bg-black translate-x-1" />
-                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" />
+
+                  <div className="w-11 h-6 bg-zinc-400 rounded-full peer-checked:bg-black transition-colors"></div>
+
+                  <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full
+                              transition-transform peer-checked:translate-x-5"></div>
+                </label>
               </div>
 
               <div className="flex items-baseline mb-6">
@@ -149,9 +161,14 @@ const Pricing = () => {
                     Priority delivery timeline
                   </p>
                 </div>
-                <div className="h-6 w-11 rounded-full bg-zinc-600 flex items-center px-1">
-                  <span className="h-4 w-4 rounded-full bg-black translate-x-1" />
-                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" />
+
+                  <div className="w-11 h-6 bg-zinc-400 rounded-full peer-checked:bg-black transition-colors"></div>
+
+                  <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full
+                              transition-transform peer-checked:translate-x-5"></div>
+                </label>
               </div>
 
               <div className="flex items-baseline mb-6">
