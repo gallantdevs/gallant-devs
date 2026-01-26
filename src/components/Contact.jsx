@@ -36,14 +36,34 @@ export default function Contact() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSubmit = async(e) => { 
-    e.preventDefault();
-    await fetch("https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec", {
+  // const handleSubmit = async(e) => { 
+  //   e.preventDefault();
+  //   await fetch("https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec", {
+  //     method: "POST",
+  //     headers:{"Content-Type":"application/json"},
+  //     body: JSON.stringify(form)});
+  //     alert("Form Submitted")
+  //  }
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  Object.entries(form).forEach(([key, value]) => {
+    formData.append(key, value);
+  });
+
+  await fetch(
+    "https://script.google.com/macros/s/AKfycbxtgN7vdN9w4zhUAT6ZI3B8fHbg48oIGRa72v2_ZjFXo19zpH1Z68TOPPgZJaZylk6ssg/exec",
+    {
       method: "POST",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify(form)});
-      alert("Form Submitted")
-   }
+      body: formData
+    }
+  );
+
+  alert("Form Submitted");
+};
+
 
   return (
     <section
