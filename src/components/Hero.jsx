@@ -33,9 +33,10 @@ const Hero = () => {
             Building the <em className="italic text-white">future</em>, one paradigm{" "}
             <em className="italic text-white">shift at a time</em>
         </h1> */}
-        <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
-          Engineering <em className="italic text-white">digital experiences</em>, one{" "}
-          <em className="italic text-white">breakthrough</em> at a time
+        {/* ding */}
+        <h1 className="rounded-lg backdrop-blur-sm max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-900">
+          Engineering <em className="italic ">digital experiences</em>, one{" "}
+          <em className="italic ">breakthrough</em> at a time
         </h1>
 
 

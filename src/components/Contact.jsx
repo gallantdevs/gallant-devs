@@ -1,3 +1,6 @@
+// https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec
+// deployment id:
+// AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog
 import { useEffect, useRef, useState } from "react";
 // import img7 from "../../public/7.jpg";
 import img7 from "../../public/K.jpeg";
@@ -15,6 +18,13 @@ export default function Contact() {
   const [projectType, setProjectType] = useState("");
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    "project-type": "",
+    message: ""
+  })
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -25,6 +35,15 @@ export default function Contact() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const handleSubmit = async(e) => { 
+    e.preventDefault();
+    await fetch("https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec", {
+      method: "POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify(form)});
+      alert("Form Submitted")
+   }
 
   return (
     <section
@@ -50,8 +69,7 @@ export default function Contact() {
           </p>
 
           <form
-            action="https://formspree.io/f/xldlqlkv"
-            method="POST"
+            onSubmit={handleSubmit}
             className="space-y-6"
           >
             {/* Name / Email */}
@@ -63,6 +81,7 @@ export default function Contact() {
                   required
                   placeholder="Your name"
                   className="px-4 py-3 rounded-lg bg-zinc-900/60 border border-zinc-800 text-white placeholder-zinc-500 focus:ring-2 focus:ring-white/10 focus:border-zinc-600 transition hover:border-zinc-600"
+                  onChange={e => setForm({...form, name: e.target.value})}
                 />
               </div>
 
@@ -74,6 +93,8 @@ export default function Contact() {
                   required
                   placeholder="your@email.com"
                   className="px-4 py-3 rounded-lg bg-zinc-900/60 border border-zinc-800 text-white placeholder-zinc-500 focus:ring-2 focus:ring-white/10 focus:border-zinc-600 transition hover:border-zinc-600"
+                  onChange={e => setForm({...form, email: e.target.value})}
+
                 />
               </div>
             </div>
@@ -85,6 +106,7 @@ export default function Contact() {
                 name="company"
                 placeholder="Company name (optional)"
                 className="px-4 py-3 rounded-lg bg-zinc-900/60 border border-zinc-800 text-white placeholder-zinc-500 focus:ring-2 focus:ring-white/10 focus:border-zinc-600 transition hover:border-zinc-600 "
+                onChange={e => setForm({...form, company: e.target.value})}
               />
             </div>
 
@@ -92,7 +114,13 @@ export default function Contact() {
             <div ref={dropdownRef} className="relative flex flex-col">
               <label className="text-sm text-zinc-400 mb-2">Project Type</label>
 
-              <input type="hidden" name="project" value={projectType} />
+              <input type="hidden" name="project" value={projectType} 
+                onClick={() => {
+                  setProjectType(type);
+                  setForm(prev => ({ ...prev, "project-type": type }));
+                  setOpen(false);
+                }}
+              />
 
               <button
                 type="button"
@@ -140,6 +168,8 @@ export default function Contact() {
                 required
                 placeholder="Tell me about your project..."
                 className="px-4 py-3 rounded-lg bg-zinc-900/60 border border-zinc-800 text-white placeholder-zinc-500 focus:ring-2 focus:ring-white/10 focus:border-zinc-600 transition resize-none hover:border-zinc-600"
+                onChange={e => setForm({...form, message: e.target.value})}
+
               />
             </div>
 

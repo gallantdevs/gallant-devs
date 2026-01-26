@@ -52,7 +52,7 @@ const NavBar = () => {
           {/* Branding */}
           <div className="flex items-center gap-2 cursor-pointer">
             <img src={logo} alt="logo" className="w-8" />
-            <h1 className="logo font-semibold text-lg uppercase text-[#C69C49]">
+            <h1 className="logo font-semibold text-xl uppercase text-[#C69C49]">
               Gallant Devs
             </h1>
           </div>
@@ -100,7 +100,7 @@ const NavBar = () => {
       {/* Mobile Navigation */}
       <div
         className={`md:hidden absolute top-20 inset-x-0 w-full  backdrop-blur-lg transition-all duration-500 ${
-          isMobileOpen ? "max-h-96 opacity-100 visible" : "max-h-0 opacity-0 invisible"
+          isMobileOpen ? "max-h- opacity-100 visible" : "max-h-0 opacity-0 invisible"
         }`}
       >
         <div className="flex flex-col items-center gap-6 py-8">
@@ -109,7 +109,7 @@ const NavBar = () => {
               key={index}
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMobileOpen(false)}
-              className="text-md uppercase text-white tracking-wide"
+              className="text-md uppercase text-white font-semibold tracking-wide"
             >
               {item}
             </a>

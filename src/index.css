@@ -18,5 +18,5 @@ html{
 
 @utility floating-nav {
   /* @apply bg-black rounded-lg border; */
-  @apply backdrop-blur-sm rounded-lg border;
+  @apply backdrop-blur-md sm:rounded-lg border;
 }
