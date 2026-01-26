@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen overflow-x-hidden text-white">
+      <main className="relative min-h-screen overflow-x-hidden">
         <Hero />
       </main>
       <main className='relative max-w-7xl mx-auto'>
@@ -25,7 +25,7 @@ const App = () => {
         <Card />
         <Contact />
       </main>
-      <div className='w-full h-0.5 bg-zinc-400'></div>
+      <div className='w-full h-0.5 bg-zinc-700'></div>
       <Footer />
     </>
   )

@@ -24,20 +24,16 @@ const Hero = () => {
         loop
         playsInline
       />
-      {/* Optional overlay (for darkening / tint)
-      <div className="absolute inset-0 bg-black/10" /> */}
+      {/* Optional overlay (for darkening / tint) */}
+      <div className="absolute inset-0 bg-black/80" />
 
       {/* Optional content on top */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 text-center">
-        {/* <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
+        <h1 className="max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-300">
             Building the <em className="italic text-white">future</em>, one paradigm{" "}
             <em className="italic text-white">shift at a time</em>
-        </h1> */}
-        {/* ding */}
-        <h1 className="rounded-lg backdrop-blur-sm max-w-3xl text-2xl max-sm:text-xl md:text-3xl font-light tracking-wide text-zinc-900">
-          Engineering <em className="italic ">digital experiences</em>, one{" "}
-          <em className="italic ">breakthrough</em> at a time
         </h1>
+        
 
 
         <p className="text-sm md:text-base font-medium tracking-widest text-zinc-400 uppercase">

@@ -63,9 +63,10 @@ export default function Contact() {
            Let&apos;s Connect
         </h2>
 
-          <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500mb-10 max-w-xl">
-            Ready to build something meaningful? Whether it’s a bold idea, a
-            complex system, or a quick hello — I’m all ears.
+          <p className="text-base md:text-lg text-zinc-300 leading-relaxed hover:text-white transition-colors duration-500 mb-10 max-w-xl">
+            Let's build domething valuable. Whether it's an idea, a system, or a quick conversation 
+            -
+            let's talk
           </p>
 
           <form
