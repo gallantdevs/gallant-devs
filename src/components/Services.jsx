@@ -2,7 +2,7 @@
 // import img5 from '../../public/5.png'
 // import img6 from '../../public/6.png'
 
-import img4 from '../../public/H.jpeg'
+import img4 from '../../public/one.jpg'
 import img5 from '../../public/I.jpeg'
 import img6 from '../../public/J.jpeg'
 
@@ -10,8 +10,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="px-4 md:px-6 max-w-7xl mx-auto"
-      aria-labelledby="services-heading"
+      className="px-4 md:px-6 max-w-7xl mx-auto overflow-x-hidden"
     >
       {/* HEADER */}
       <header className="text-center mb-16 md:mb-24">

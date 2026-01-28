@@ -3,79 +3,85 @@ const Pricing = () => {
   const basicPlan = {
   title: "Basic",
   description:
-    "Ideal for individual and small brands needing a fast, polished web presence.",
+    "Ideal for individuals and small brands seeking a fast, polished online presence.",
   basePrice: 150,
-  fastPrice: 50, // adjust if Fast Execution increases price
+  fastPrice: 50,
   badge: "BASIC",
   highlighted: false,
   buttonText: "Get Started",
   features: [
-    "Mobile Responsive Design",
-    "SEO Optimization",
-    "Contact Forms",
-    "Social Media Integration",
-    "Basic CMS",
-    "2 Revisions",
+    "Fully Responsive, Mobile-First Design",
+    "Search Engine Optimization (SEO)",
+    "Integrated Contact Forms",
+    "Social Media Connectivity",
+    "Lightweight Content Management System",
+    "Up to 2 Revision Rounds",
+    "Delivery Timeline: 5–7 Business Days",
   ],
 };
-  const essentialPlan = {
+
+const essentialPlan = {
   title: "Essential",
   description:
-    "Perfect for startups and small businesses looking to establish a professional digital presence.",
+    "Perfect for startups and small businesses building a strong, professional digital foundation.",
   basePrice: 150,
-  fastPrice: 50, // adjust if Fast Execution increases price
+  fastPrice: 50,
   badge: null,
   highlighted: false,
   buttonText: "Get Started",
   features: [
-    "Mobile Responsive Design",
-    "SEO Optimization",
-    "Contact Forms",
+    "Fully Responsive, Mobile-First Design",
+    "On-Page SEO Optimization",
+    "Custom Contact Forms",
     "Social Media Integration",
-    "Basic CMS",
-    "3 Revisions",
+    "User-Friendly CMS",
+    "Up to 3 Revision Rounds",
+    "Delivery Timeline: 7–10 Business Days",
   ],
 };
 
-  const professionalPlan = {
+const professionalPlan = {
   title: "Professional",
   description:
-    "Ideal for growing businesses that need advanced functionality and scalability.",
+    "Designed for growing businesses requiring advanced features and scalable architecture.",
   basePrice: 300,
-  fastPrice: 400, // or set if you want Fast Execution to increase price
+  fastPrice: 400,
   badge: "POPULAR",
   highlighted: true,
   buttonText: "Most Popular",
   features: [
-    "Everything in Essential",
-    "User Authentication",
-    "Payment Processing",
-    "Database Integration",
-    "API Development",
-    "Admin Dashboard",
-    "5 Revisions",
-    ],
-  };
+    "All Essential Plan Features Included",
+    "Secure User Authentication",
+    "Online Payment Processing",
+    "Database Architecture & Integration",
+    "Custom API Development",
+    "Administrative Control Dashboard",
+    "Up to 5 Revision Rounds",
+    "Delivery Timeline: 2–3 Weeks",
+  ],
+};
 
-  const enterprisePlan = {
+const enterprisePlan = {
   title: "Enterprise",
   description:
-    "For companies requiring complex systems, AI integration, and enterprise-grade solutions.",
+    "Built for organizations needing complex systems, AI capabilities, and enterprise-grade performance.",
   basePrice: 900,
-  fastPrice: 200, // or set if you want Fast Execution to increase price
+  fastPrice: 200,
   badge: null,
   highlighted: false,
   buttonText: "Contact Sales",
   features: [
-    "Everything in Professional",
-    "AI Integration",
-    "Advanced Security",
-    "Custom Integrations",
-    "Performance Optimization",
-    "Dedicated Support",
+    "All Professional Plan Features Included",
+    "AI-Powered Integrations",
+    "Advanced Security & Compliance Measures",
+    "Custom Third-Party Integrations",
+    "Performance & Scalability Optimization",
+    "Priority Dedicated Support",
     "Unlimited Revisions",
+    "Delivery Timeline: 4–6 Weeks",
   ],
 };
+
   return (
     <section
       id="pricing"

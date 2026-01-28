@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import ss1 from "../../public/ss1.jpeg";
 import ss2 from "../../public/ss2.jpg";
 import ss3 from "../../public/ss3.jpg";
-import ss4 from "../../public/ss4.jpg";
+import ss4 from "../../public/ahh.jpeg";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 
 const cardData = [
-  { id: 1, url: ss1 },
+  { id: 1, url: ss3 },
   { id: 2, url: ss2 },
-  { id: 3, url: ss3 },
+  { id: 3, url: ss1 },
   { id: 4, url: ss4 },
-  { id: 5, url: ss1 },
+  { id: 5, url: ss2 },
 ];
 
 const SwipeCards = () => {
@@ -27,7 +27,7 @@ const SwipeCards = () => {
   };
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto h-[500px] md:h-[400px] flex items-center justify-center px-4">
+    <div className="relative w-full max-w-7xl mx-auto h-[500px] md:h-[400px] flex items-center justify-center px-4 overflow-x-hidden">
       {/* Left Button */}
       <button
         onClick={shiftLeft}

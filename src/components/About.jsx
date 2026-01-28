@@ -10,7 +10,6 @@ const About = () => {
     <section
       id="about"
       className="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto"
-      aria-labelledby="about-heading"
 >
   <div
     style={{

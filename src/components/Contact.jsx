@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import { useEffect, useRef, useState } from "react";
 // import img7 from "../../public/7.jpg";
-import img7 from "../../public/K.jpeg";
+import img7 from "../../public/last.jpg";
 
 const PROJECT_TYPES = [
   "Web Development",
