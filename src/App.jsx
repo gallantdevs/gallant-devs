@@ -8,6 +8,7 @@ import Card from './components/CardAnimation'
 import TechStack from './components/Techstack'
 import Work from './components/Work'
 import Pricing from './components/Pricing'
+import Offers from './components/Offers'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -25,6 +26,7 @@ const App = () => {
         {/* <Work /> */}
         <Card />
         <Pricing />
+        <Offers />
         <Contact />
       </main>
       <div className='w-full h-0.5 bg-zinc-700'></div>

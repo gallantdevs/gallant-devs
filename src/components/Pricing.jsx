@@ -1,5 +1,23 @@
 import PlanCard from './PlanCard'
 const Pricing = () => {
+  const basicPlan = {
+  title: "Basic",
+  description:
+    "Ideal for individual and small brands needing a fast, polished web presence.",
+  basePrice: 150,
+  fastPrice: 50, // adjust if Fast Execution increases price
+  badge: "BASIC",
+  highlighted: false,
+  buttonText: "Get Started",
+  features: [
+    "Mobile Responsive Design",
+    "SEO Optimization",
+    "Contact Forms",
+    "Social Media Integration",
+    "Basic CMS",
+    "2 Revisions",
+  ],
+};
   const essentialPlan = {
   title: "Essential",
   description:
@@ -75,8 +93,9 @@ const Pricing = () => {
       </header>
 
       {/* PRICING GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* ESSENTIAL */}
+        <PlanCard {...basicPlan} />
         <PlanCard {...essentialPlan} />
         <PlanCard {...professionalPlan} />
         <PlanCard {...enterprisePlan} />
