@@ -3,7 +3,8 @@ import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import logo from '../../public/logo.png'
 
-const navItems = ["About", "Services", "Work", "Blog", "Contact"];
+// const navItems = ["About", "Services", "Work", "Blog", "Contact"];
+const navItems = ["About", "Services", "Work", "Contact"];
 
 const NavBar = () => {
   // Refs for navigation container

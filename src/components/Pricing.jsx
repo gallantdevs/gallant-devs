@@ -4,8 +4,8 @@ const Pricing = () => {
   title: "Basic",
   description:
     "Ideal for individuals and small brands seeking a fast, polished online presence.",
-  basePrice: 150,
-  fastPrice: 50,
+  basePrice: 100,
+  fastPrice: 400,
   badge: "BASIC",
   highlighted: false,
   buttonText: "Get Started",
@@ -24,8 +24,8 @@ const essentialPlan = {
   title: "Essential",
   description:
     "Perfect for startups and small businesses building a strong, professional digital foundation.",
-  basePrice: 150,
-  fastPrice: 50,
+  basePrice: 800,
+  fastPrice: 400,
   badge: null,
   highlighted: false,
   buttonText: "Get Started",
@@ -44,8 +44,8 @@ const professionalPlan = {
   title: "Professional",
   description:
     "Designed for growing businesses requiring advanced features and scalable architecture.",
-  basePrice: 300,
-  fastPrice: 400,
+  basePrice: 1500,
+  fastPrice: 500,
   badge: "POPULAR",
   highlighted: true,
   buttonText: "Most Popular",
@@ -65,8 +65,8 @@ const enterprisePlan = {
   title: "Enterprise",
   description:
     "Built for organizations needing complex systems, AI capabilities, and enterprise-grade performance.",
-  basePrice: 900,
-  fastPrice: 200,
+  basePrice: 2500,
+  fastPrice: 3500,
   badge: null,
   highlighted: false,
   buttonText: "Contact Sales",

@@ -69,7 +69,7 @@ export default function Footer() {
 
                 {/* X / Twitter */}
                 <a
-                  href="https://www.instagram.com/gallantdevs"
+                  href="https://x.com/gallantdevs"
                   target="_blank"
                   className="group flex h-12 w-12 items-center justify-center rounded-full 
                             bg-black/10 transition-all duration-300

@@ -2,8 +2,8 @@
 // import img2 from '../../public/2.png'
 // import img3 from '../../public/3.jpeg' 
 import img1 from '../../public/AA34.jpg'
-import img2 from '../../public/B.jpeg'
-import img3 from '../../public/C.jpeg' 
+import img2 from '../../public/lcha.jpg'
+import img3 from '../../public/Cta.jpg' 
 
 const About = () => {
   return (
