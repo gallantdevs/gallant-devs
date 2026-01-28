@@ -23,13 +23,13 @@ const App = () => {
         <Services />
         <TechStack />
         {/* <Work /> */}
+        <Card />
         <Pricing />
-        {/* <Card /> */}
         <Contact />
       </main>
       <div className='w-full h-0.5 bg-zinc-700'></div>
       <Footer />      
-      <ToastContainer position="top-right" autoClose={3000} />
+      <ToastContainer position="top-right" autoClose={3000} theme="dark" />
     </>
   )
 }

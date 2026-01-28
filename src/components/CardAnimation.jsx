@@ -1,76 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import ss1 from "../../public/ss1.jpeg";
+import ss2 from "../../public/ss2.jpg";
+import ss3 from "../../public/ss3.jpg";
+import ss4 from "../../public/ss4.jpg";
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
 
 const cardData = [
-  {
-    id: 1,
-    url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=2235&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2342&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop",
-  },
+  { id: 1, url: ss1 },
+  { id: 2, url: ss2 },
+  { id: 3, url: ss3 },
+  { id: 4, url: ss4 },
+  { id: 5, url: ss1 },
 ];
 
-const containerVariants = {
-  closed: {},
-  open: {},
-};
-
-const cardVariants = {
-  closed: (i) => ({
-    x: 0,
-    rotate: 0,
-    scale: 1,
-  }),
-  open: (i) => ({
-    x: (i - cardData.length / 2) * 40,
-    rotate: (i - cardData.length / 2) * 6,
-    scale: 1.02,
-  }),
-};
-
 const SwipeCards = () => {
+  const [centerIndex, setCenterIndex] = useState(Math.floor(cardData.length / 2));
+
+  const shiftLeft = () => {
+    setCenterIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const shiftRight = () => {
+    setCenterIndex((prev) => Math.min(prev + 1, cardData.length - 1));
+  };
+
   return (
-    <motion.div
-      className="relative h-[500px] w-full grid place-items-center bg-neutral-100"
-      initial="closed"
-      whileHover="open"
-      variants={containerVariants}
-    >
-      {cardData.map((card, index) => (
-        <motion.img
-          key={card.id}
-          src={card.url}
-          alt=""
-          custom={index}
-          variants={cardVariants}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-          }}
-          className="absolute h-96 w-72 rounded-lg object-cover cursor-pointer"
-          style={{
-            zIndex: index,
-            boxShadow:
-              "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)",
-          }}
-        />
-      ))}
-    </motion.div>
+    <div className="relative w-full max-w-7xl mx-auto h-[500px] md:h-[400px] flex items-center justify-center px-4">
+      {/* Left Button */}
+      <button
+        onClick={shiftLeft}
+        className="absolute left-2 z-20 h-12 w-12 rounded-full bg-black/50 text-white text-2xl flex items-center justify-center hover:bg-black/70 transition"
+      >
+        <FaAngleLeft />
+      </button>
+
+      {/* Right Button */}
+      <button
+        onClick={shiftRight}
+        className="absolute right-2 z-20 h-12 w-12 rounded-full bg-black/50 text-white text-2xl flex items-center justify-center hover:bg-black/70 transition"
+      >
+        <FaAngleRight />
+      </button>
+
+      {/* Cards */}
+      {cardData.map((card, index) => {
+        const offsetFromCenter = index - centerIndex;
+        return (
+          <motion.img
+            key={card.id}
+            src={card.url}
+            alt=""
+            initial={{ scale: 1, rotate: 0, x: 0 }}
+            animate={{
+              x: offsetFromCenter * 50,
+              rotate: offsetFromCenter * 8,
+              scale: index === centerIndex ? 1.05 : 0.95,
+              zIndex: cardData.length - Math.abs(offsetFromCenter),
+              opacity: Math.abs(offsetFromCenter) > 2 ? 0 : 1, // hide far cards
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="absolute h-96 w-72 md:h-72 md:w-56 rounded-lg object-cover cursor-pointer shadow-xl"
+          />
+        );
+      })}
+    </div>
   );
 };
 

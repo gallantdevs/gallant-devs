@@ -9,8 +9,10 @@ import {
   SiFramer,
   SiGreensock,
 } from "react-icons/si";
+import { FaWordpress } from "react-icons/fa";
 
 const TECH_STACK = [
+  { name: "Wordpress", icon: FaWordpress },
   { name: "Next.js", icon: SiNextdotjs },
   { name: "React", icon: SiReact },
   { name: "TypeScript", icon: SiTypescript },

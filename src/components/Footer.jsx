@@ -27,7 +27,7 @@ export default function Footer() {
             <address className="not-italic flex flex-col gap-3">
               
               <div className="flex items-center gap-2 text-zinc-400">
-                <span>gallantdev@gmail.com</span>
+                <span>gallantdevs@gmail.com</span>
 
                 <FiCopy
                   onClick={() => {
@@ -90,16 +90,15 @@ export default function Footer() {
 
             <a
               href={`#contact`}
-              rel="noopener noreferrer"
               className="flex items-center justify-center w-full max-w-[200px] min-h-[50px] rounded-lg bg-white text-black font-medium hover:bg-zinc-200 hover:scale-105 transition"
             >
               Hire Us
             </a>
 
-            <p className="text-zinc-400 mt-4 hover:text-zinc-300 transition-colors">
+            <p className="text-zinc-400 mt-4 hover:text-white transition-colors">
               Ready to start your next project?
             </p>
-            <p className="text-sm font-mono text-zinc-500 mt-2">
+            <p className="text-sm font-mono text-zinc-500 mt-2 hover:text-white transition-colors">
               Web Developer • Web Designer • AI Developer
             </p>
           </div>
