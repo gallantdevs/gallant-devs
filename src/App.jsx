@@ -1,13 +1,15 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
-import Pricing from './components/Pricing'
 import Card from './components/CardAnimation'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
 import TechStack from './components/Techstack'
 import Work from './components/Work'
+import Pricing from './components/Pricing'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -20,13 +22,14 @@ const App = () => {
         <About />
         <Services />
         <TechStack />
-        <Work />
+        {/* <Work /> */}
         <Pricing />
-        <Card />
+        {/* <Card /> */}
         <Contact />
       </main>
       <div className='w-full h-0.5 bg-zinc-700'></div>
-      <Footer />
+      <Footer />      
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   )
 }

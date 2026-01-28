@@ -1,4 +1,42 @@
+import PlanCard from './PlanCard'
 const Pricing = () => {
+  const essentialPlan = {
+  title: "Essential",
+  description:
+    "Perfect for startups and small businesses looking to establish a professional digital presence.",
+  basePrice: 800,
+  fastPrice: 10000, // adjust if Fast Execution increases price
+  badge: null,
+  highlighted: false,
+  buttonText: "Get Started",
+  features: [
+    "Mobile Responsive Design",
+    "SEO Optimization",
+    "Contact Forms",
+    "Social Media Integration",
+    "Basic CMS",
+    "3 Revisions",
+  ],
+};
+  const enterprisePlan = {
+  title: "Enterprise",
+  description:
+    "For companies requiring complex systems, AI integration, and enterprise-grade solutions.",
+  basePrice: 2500,
+  fastPrice: 1000, // or set if you want Fast Execution to increase price
+  badge: null,
+  highlighted: false,
+  buttonText: "Contact Sales",
+  features: [
+    "Everything in Professional",
+    "AI Integration",
+    "Advanced Security",
+    "Custom Integrations",
+    "Performance Optimization",
+    "Dedicated Support",
+    "Unlimited Revisions",
+  ],
+};
   return (
     <section
       id="pricing"
@@ -18,64 +56,26 @@ const Pricing = () => {
       {/* PRICING GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* ESSENTIAL */}
-        <div className="relative group">
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 rounded-2xl blur-xl transition-all duration-500 group-hover:blur-2xl" />
-          <div className="relative bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 md:p-8 transition-all duration-500 hover:scale-[1.03]">
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-xl text-white">Essential</h3>
-                <span className="w-3 h-3 bg-zinc-600 rounded-full" />
-              </div>
-              <p className="text-zinc-300 text-sm mb-6">
-                Perfect for startups and small businesses looking to establish a
-                professional digital presence.
-              </p>
+        <PlanCard {...essentialPlan} />
 
-              <div className="flex items-center justify-between mb-4 p-3 bg-zinc-800/30 rounded-lg">
-                <div>
-                  <p className="text-white text-sm font-medium">
-                    Fast Execution
-                  </p>
-                  <p className="text-zinc-400 text-xs">
-                    Priority delivery timeline
-                  </p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" />
+        {/* <PlanCard
+          title="Essential"
+          description="Perfect for startups and small businesses looking to establish a
+                professional digital presence."
+          basePrice={800}
+          fastPrice={200}
+          buttonText="Get Started"
+          features={[
+            " Mobile Responsive Design",
+            " SEO Optimization",
+            " Contact Forms",
+            " Social Media Integration",
+            " Basic CMS",
+            " 3 Revisions"
+          ]}
+        /> */}
 
-                  <div className="w-11 h-6 bg-zinc-400 rounded-full peer-checked:bg-black transition-colors"></div>
-
-                  <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full
-                              transition-transform peer-checked:translate-x-5"></div>
-                </label>
-
-
-              </div>
-
-              <div className="flex items-baseline mb-6">
-                <span className="text-3xl md:text-4xl font-bold text-white">
-                  $800
-                </span>
-                <span className="text-zinc-300 ml-2">starting</span>
-              </div>
-            </div>
-
-            <ul className="space-y-3 mb-8 text-sm text-zinc-300">
-              <li><span className="text-[#DAA520] mr-2">•</span> Mobile Responsive Design</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> SEO Optimization</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Contact Forms</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Social Media Integration</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Basic CMS</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> 3 Revisions</li>
-            </ul>
-
-            <button className="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-medium py-3 rounded-lg transition">
-              Get Started
-            </button>
-          </div>
-        </div>
-
-        {/* PROFESSIONAL */}
+        {/* PROFESSIONAL
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-br from-zinc-700/60 to-zinc-900/60 rounded-2xl blur-xl transition-all duration-500 group-hover:blur-2xl" />
           <div className="relative bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 transition-all duration-500 hover:scale-[1.05]">
@@ -135,66 +135,28 @@ const Pricing = () => {
               Most Popular
             </button>
           </div>
+        </div> */}
+        <PlanCard
+  title="Professional"
+  description="Ideal for growing businesses that need advanced functionality and scalability."
+  basePrice={1500}
+  fastPrice={500}
+  badge="POPULAR"
+  highlighted
+  features={[
+    "Everything in Essential",
+    "User Authentication",
+    "Payment Processing",
+    "Database Integration",
+    "API Development",
+    "Admin Dashboard",
+    "5 Revisions",
+  ]}
+  buttonText="Most Popular"
+  />
+
+        <PlanCard {...enterprisePlan} />
         </div>
-
-        {/* ENTERPRISE */}
-        <div className="relative group md:col-span-2 lg:col-span-1">
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 rounded-2xl blur-xl transition-all duration-500 group-hover:blur-2xl" />
-          <div className="relative bg-black/80 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 md:p-8 transition-all duration-500 hover:scale-[1.03]">
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-xl text-white">Enterprise</h3>
-                <span className="w-3 h-3 bg-gradient-to-r from-zinc-400 to-zinc-600 rounded-full" />
-              </div>
-
-              <p className="text-zinc-300 text-sm mb-6">
-                For companies requiring complex systems, AI integration, and
-                enterprise-grade solutions.
-              </p>
-
-              <div className="flex items-center justify-between mb-4 p-3 bg-zinc-800/30 rounded-lg">
-                <div>
-                  <p className="text-white text-sm font-medium">
-                    Fast Execution
-                  </p>
-                  <p className="text-zinc-400 text-xs">
-                    Priority delivery timeline
-                  </p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" />
-
-                  <div className="w-11 h-6 bg-zinc-400 rounded-full peer-checked:bg-black transition-colors"></div>
-
-                  <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full
-                              transition-transform peer-checked:translate-x-5"></div>
-                </label>
-              </div>
-
-              <div className="flex items-baseline mb-6">
-                <span className="text-3xl md:text-4xl font-bold text-white">
-                  $2,500
-                </span>
-                <span className="text-zinc-300 ml-2">starting</span>
-              </div>
-            </div>
-
-            <ul className="space-y-3 mb-8 text-sm text-zinc-300">
-              <li><span className="text-[#DAA520] mr-2">•</span> Everything in Professional</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> AI Integration</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Advanced Security</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Custom Integrations</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Performance Optimization</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Dedicated Support</li>
-              <li><span className="text-[#DAA520] mr-2">•</span> Unlimited Revisions</li>
-            </ul>
-
-            <button className="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-medium py-3 rounded-lg transition">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* FOOTER NOTE */}
       <div className="text-center mt-16">

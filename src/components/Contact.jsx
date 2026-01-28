@@ -1,6 +1,4 @@
-// https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec
-// deployment id:
-// AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog
+import { toast } from "react-toastify";
 import { useEffect, useRef, useState } from "react";
 // import img7 from "../../public/7.jpg";
 import img7 from "../../public/K.jpeg";
@@ -36,34 +34,29 @@ export default function Contact() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // const handleSubmit = async(e) => { 
-  //   e.preventDefault();
-  //   await fetch("https://script.google.com/macros/s/AKfycbykMw4zuACRlfbwqahL5EcbFyJwqeb5tnYJfz9aC9ke5H5othrJ9-Z5ZKoUktWhDkfqog/exec", {
-  //     method: "POST",
-  //     headers:{"Content-Type":"application/json"},
-  //     body: JSON.stringify(form)});
-  //     alert("Form Submitted")
-  //  }
-
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const formData = new FormData();
-  Object.entries(form).forEach(([key, value]) => {
-    formData.append(key, value);
-  });
+    const formData = new FormData();
+    Object.entries(form).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
 
-  await fetch(
-    "https://script.google.com/macros/s/AKfycbxtgN7vdN9w4zhUAT6ZI3B8fHbg48oIGRa72v2_ZjFXo19zpH1Z68TOPPgZJaZylk6ssg/exec",
-    {
-      method: "POST",
-      body: formData
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxtgN7vdN9w4zhUAT6ZI3B8fHbg48oIGRa72v2_ZjFXo19zpH1Z68TOPPgZJaZylk6ssg/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      
+    toast.success("Thanks for reaching out! We'll contact you soon 🚀");
+    } catch (err) {
+      toast.error("Oops! We couldn't send your message. Try again in a bit 🙏");
     }
-  );
-
-  alert("Form Submitted");
-};
-
+  };
 
   return (
     <section

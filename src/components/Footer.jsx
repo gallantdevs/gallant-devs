@@ -1,9 +1,9 @@
+import { toast } from "react-toastify";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FiCopy } from "react-icons/fi";
 export default function Footer() {
   return (
     <footer
-      role="contentinfo"
       className="relative z-10 py-8 md:py-12 px-4 md:px-6 mb-20"
     >
       <div className="max-w-7xl mx-auto">
@@ -30,7 +30,10 @@ export default function Footer() {
                 <span>gallantdev@gmail.com</span>
 
                 <FiCopy
-                  onClick={() => navigator.clipboard.writeText("gallantdev@gmail.com")}
+                  onClick={() => {
+                    navigator.clipboard.writeText("gallantdev@gmail.com")
+                    toast.success("Email copied to clipboard 📋");
+                  }}
                   className="cursor-pointer text-md transition-colors
                             hover:text-white active:scale-75"
                   title="Copy"
@@ -40,7 +43,10 @@ export default function Footer() {
                 <span>+91 83578107773</span>
 
                 <FiCopy
-                  onClick={() => navigator.clipboard.writeText("+91 83578107773")}
+                  onClick={() => {
+                    navigator.clipboard.writeText("+91 83578107773")
+                    toast.success("Phone number copied to clipboard 📋");
+                }}
                   className="cursor-pointer text-md transition-colors
                             hover:text-white active:scale-75"
                   title="Copy"
