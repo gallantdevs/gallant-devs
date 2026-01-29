@@ -74,12 +74,23 @@ const PlanCard = ({
           </div>
 
           {/* Price */}
-          <div className="flex items-baseline mb-6">
-            <span className="text-3xl md:text-4xl font-bold text-white">
-              ${price.toLocaleString()}
-            </span>
-            <span className="text-white ml-2">starting</span>
-          </div>
+         {/* Price */}
+<div className="flex items-baseline mb-6">
+  {title === "Basic" ? (
+    <>
+      <span className="text-3xl md:text-4xl font-bold text-white">
+        $100 – $500
+      </span>
+    </>
+  ) : (
+    <>
+      <span className="text-3xl md:text-4xl font-bold text-white">
+        ${price.toLocaleString()}
+      </span>
+      <span className="text-white ml-2">starting</span>
+    </>
+  )}
+</div>
         </div>
 
         {/* Timeline */}
