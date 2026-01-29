@@ -4,8 +4,8 @@ const Pricing = () => {
   title: "Basic",
   description:
     "Ideal for individuals and small brands seeking a fast, polished online presence.",
-  basePrice: 100,
-  fastPrice: 400,
+  basePrice: 500,
+  fastPrice: 200,
   badge: "BASIC",
   highlighted: false,
   buttonText: "Get Started",
@@ -66,7 +66,7 @@ const enterprisePlan = {
   description:
     "Built for organizations needing complex systems, AI capabilities, and enterprise-grade performance.",
   basePrice: 2500,
-  fastPrice: 3500,
+  fastPrice: 1000,
   badge: null,
   highlighted: false,
   buttonText: "Contact Sales",

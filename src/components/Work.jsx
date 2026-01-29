@@ -1,107 +1,152 @@
-import { img } from 'framer-motion/client';
-import imgL from '../../public/L.jpeg'
+import { useRef } from "react";
+import img1 from "../../public/111.jpg";
+import img2 from "../../public/222.jpg";
+import img3 from "../../public/333.jpg";
+import { FiArrowLeft, FiArrowRight, FiExternalLink } from "react-icons/fi";
+
 export default function Work() {
+  const scrollRef = useRef(null);
+
   const projects = [
     {
-      title: "AI SaaS Platform",
-      desc: "Smart automation powered by machine intelligence.",
-      tech: "Next.js • OpenAI • Tailwind",
-      image: imgL,
+      title: "Huly",
+      desc: "High-performance SaaS landing page featuring a TEchnical dark-mode interface and fluid motion design.",
+      image: img1,
+      link: "hulu.io",
     },
     {
-      title: "E-Commerce Experience",
-      desc: "High-conversion modern storefront.",
-      tech: "React • Stripe • Framer",
-      image: imgL,
+      title: "Grainne Morton",
+      desc: "Custom grid-based luxury storefront focused on minimalist UI and high-end product storytelling.",
+      image: img2,
+      link: "grainnemorton.co.uk",
     },
     {
-      title: "Analytics Dashboard",
-      desc: "Insightful data visualization at scale.",
-      tech: "Next.js • D3 • PostgreSQL",
-      image: imgL,
+      title: "Green Peas for Breakfast",
+      desc: "Experimental agency portfolio focued on bold typography, custom micro-interactions, and unique brand identity.",
+      image: img3,
+      link: "greenpeasforbreakfast.com",
     },
-    {
-      title: "Portfolio Website",
-      desc: "Minimal, fast, and elegant personal brand.",
-      tech: "Next.js • Tailwind • Motion",
-      image: imgL,
-    },
+   
   ];
 
   return (
     <section
       id="tech-stack"
-      className="max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 overflow-hidden"
+      className="max-w-7xl mx-auto px-4 md:px-6 py-7 md:py-10"
     >
-      {/* Header */}
+      {/* Header (unchanged) */}
       <div className="mb-16 text-center">
-        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-white">
-          My Work
+        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-white transition-transform duration-300 hover:scale-[1.03]">
+          Our Work
         </h2>
-        <p className="text-base md:text-lg text-zinc-300">
+        <p className="text-base md:text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed">
           Design, code, and intelligence — in motion.
         </p>
       </div>
 
-      {/* Infinite Scroll */}
-      <div className="relative">
-        <div className="flex gap-6 w-max marquee hover:[animation-play-state:paused]">
-          {[...projects, ...projects].map((project, i) => (
-            <article
-              key={i}
-              className="min-w-[300px] md:min-w-[360px]
-              rounded-2xl overflow-hidden
-              bg-white/5 backdrop-blur-xl
-              border border-white/10
-              transition-all duration-300
-              hover:-translate-y-2"
-            >
-              {/* Image */}
-              <div className="relative aspect-[16/10] w-96 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              </div>
+      {/* Scrollable Row */}
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth pb-4
+        [scrollbar-width:none] [-ms-overflow-style:none]"
+      >
+        {/* hide scrollbar (webkit) */}
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
 
-              {/* Content */}
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-white mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-zinc-400 mb-3">
-                  {project.desc}
-                </p>
-                <span className="text-xs text-zinc-300">
-                  {project.tech}
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
+        {projects.map((project, i) => (
+          <article
+  key={i}
+  className="group relative min-w-[300px] md:min-w-[360px]
+  rounded-2xl overflow-hidden
+  bg-white/5 backdrop-blur-xl
+  border border-white/10
+  transition-all duration-500
+  hover:-translate-y-3"
+>
+  {/* Golden Aura */}
+  <div
+    className="pointer-events-none absolute -inset-[2px] rounded-2xl
+    opacity-0 group-hover:opacity-100
+    transition duration-700 ease-out
+    blur-xl"
+    style={{
+      background:
+        "radial-gradient(60% 60% at 50% 0%, rgba(218,165,32,0.45), transparent 70%)",
+    }}
+  />
 
-        {/* Edge fade */}
-        {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent" /> */}
+  {/* Inner Card */}
+  <div className="relative z-10 rounded-2xl overflow-hidden bg-black/40">
+    {/* Image */}
+    <div className="relative aspect-[16/10] overflow-hidden">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-full w-full object-contain
+        transition-transform duration-700 ease-out
+        group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+    </div>
+
+    {/* Content */}
+    <div className="p-5 space-y-2">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-white tracking-tight">
+          {project.title}
+        </h3>
+
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-400
+          transition-all duration-300
+          group-hover:text-[#DAA520]
+          group-hover:translate-x-0.5"
+          aria-label="Visit project"
+        >
+          <FiExternalLink size={18} />
+        </a>
       </div>
 
-      {/* CSS animation */}
-      <style jsx>{`
-        .marquee {
-          animation: scroll 40s linear infinite;
-        }
+      <p className="text-sm text-zinc-400 leading-relaxed">
+        {project.desc}
+      </p>
+    </div>
+  </div>
+</article>
 
-        @keyframes scroll {
-          from {
-            transform: translateX(0);
+
+        ))}
+      </div>
+
+      {/* Scroll Controls */}
+      <div className="mt-10 flex justify-center items-center gap-10 text-zinc-400">
+        <button
+          onClick={() =>
+            scrollRef.current.scrollBy({ left: -360, behavior: "smooth" })
           }
-          to {
-            transform: translateX(-50%);
+          className="flex items-center gap-2 hover:text-white transition"
+        >
+          <FiArrowLeft />
+          <span className="text-sm tracking-wide">Scroll Left</span>
+        </button>
+
+        <button
+          onClick={() =>
+            scrollRef.current.scrollBy({ left: 360, behavior: "smooth" })
           }
-        }
-      `}</style>
+          className="flex items-center gap-2 hover:text-white transition"
+        >
+          <span className="text-sm tracking-wide">Scroll Right</span>
+          <FiArrowRight />
+        </button>
+      </div>
     </section>
   );
 }

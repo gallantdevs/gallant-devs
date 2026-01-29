@@ -23,7 +23,7 @@ const App = () => {
         <About />
         <Services />
         <TechStack />
-        {/* <Work /> */}
+        <Work />
         <Card />
         <Pricing />
         <Offers />
