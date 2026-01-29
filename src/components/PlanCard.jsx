@@ -76,7 +76,7 @@ const PlanCard = ({
           {/* Price */}
          {/* Price */}
 <div className="flex items-baseline mb-6">
-  {title === "Basic" ? (
+  {title === "Basic" && !fast ? (
     <>
       <span className="text-3xl md:text-4xl font-bold text-white">
         $100 – $500
@@ -87,7 +87,11 @@ const PlanCard = ({
       <span className="text-3xl md:text-4xl font-bold text-white">
         ${price.toLocaleString()}
       </span>
-      <span className="text-white ml-2">starting</span>
+      {title === "Basic"?(""):(
+        <>
+        <span className="text-white ml-2">starting</span>
+        </>
+      )}
     </>
   )}
 </div>
