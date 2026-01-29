@@ -6,6 +6,8 @@ const Pricing = () => {
     "Ideal for individuals and small brands seeking a fast, polished online presence.",
   basePrice: 500,
   fastPrice: 200,
+  timeline: "3-5 days",
+  fastTimeline: "2-3 days",
   badge: "BASIC",
   highlighted: false,
   buttonText: "Get Started",
@@ -16,7 +18,6 @@ const Pricing = () => {
     "Social Media Connectivity",
     "Lightweight Content Management System",
     "Up to 2 Revision Rounds",
-    "Delivery Timeline: 5–7 Business Days",
   ],
 };
 
@@ -26,6 +27,8 @@ const essentialPlan = {
     "Perfect for startups and small businesses building a strong, professional digital foundation.",
   basePrice: 800,
   fastPrice: 400,
+  timeline: "7-10 days",
+  fastTimeline: "5-7 days",
   badge: null,
   highlighted: false,
   buttonText: "Get Started",
@@ -36,7 +39,6 @@ const essentialPlan = {
     "Social Media Integration",
     "User-Friendly CMS",
     "Up to 3 Revision Rounds",
-    "Delivery Timeline: 7–10 Business Days",
   ],
 };
 
@@ -46,6 +48,8 @@ const professionalPlan = {
     "Designed for growing businesses requiring advanced features and scalable architecture.",
   basePrice: 1500,
   fastPrice: 500,
+  timeline: "2-3 weeks",
+  fastTimeline: "12-16 days",
   badge: "POPULAR",
   highlighted: true,
   buttonText: "Most Popular",
@@ -57,7 +61,6 @@ const professionalPlan = {
     "Custom API Development",
     "Administrative Control Dashboard",
     "Up to 5 Revision Rounds",
-    "Delivery Timeline: 2–3 Weeks",
   ],
 };
 
@@ -67,6 +70,8 @@ const enterprisePlan = {
     "Built for organizations needing complex systems, AI capabilities, and enterprise-grade performance.",
   basePrice: 2500,
   fastPrice: 1000,
+  timeline: "4-6 weeks",
+  fastTimeline: "3-4 weeks",
   badge: null,
   highlighted: false,
   buttonText: "Contact Sales",
@@ -77,8 +82,7 @@ const enterprisePlan = {
     "Custom Third-Party Integrations",
     "Performance & Scalability Optimization",
     "Priority Dedicated Support",
-    "Unlimited Revisions",
-    "Delivery Timeline: 4–6 Weeks",
+    "10 Revisions",
   ],
 };
 

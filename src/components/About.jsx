@@ -3,7 +3,7 @@
 // import img3 from '../../public/3.jpeg' 
 import img1 from '../../public/AA34.jpg'
 import img2 from '../../public/lcha.jpg'
-import img3 from '../../public/Cta.jpg' 
+// import img3 from '../../public/Cta.jpg' 
 
 const About = () => {
   return (
@@ -96,7 +96,7 @@ const About = () => {
           From strategy to deployment, every detail is intentional and every interaction is purposeful. Let’s collaborate to build something refined, effective, and built to last.
         </p>
 
-        <figure className="aspect-square bg-zinc-800 rounded-lg overflow-hidden hover-lift">
+        {/* <figure className="aspect-square bg-zinc-800 rounded-lg overflow-hidden hover-lift">
           <img
             src={img3}
             alt="Detail shot representing attention to nuance"
@@ -106,7 +106,7 @@ const About = () => {
             decoding="async"
             className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
           />
-        </figure>
+        </figure> */}
       </article>
     </div>
   </div>

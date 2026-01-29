@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import img1 from "../../public/111.jpg";
-import img2 from "../../public/222.jpg";
-import img3 from "../../public/333.jpg";
+import img1 from "../../public/111a.png";
+import img2 from "../../public/222a.png";
+import img3 from "../../public/333a.png";
 import { FiArrowLeft, FiArrowRight, FiExternalLink } from "react-icons/fi";
 
 export default function Work() {
@@ -9,29 +9,30 @@ export default function Work() {
 
   const projects = [
     {
-      title: "Huly",
-      desc: "High-performance SaaS landing page featuring a TEchnical dark-mode interface and fluid motion design.",
-      image: img1,
-      link: "hulu.io",
-    },
-    {
-      title: "Grainne Morton",
-      desc: "Custom grid-based luxury storefront focused on minimalist UI and high-end product storytelling.",
-      image: img2,
-      link: "grainnemorton.co.uk",
-    },
-    {
-      title: "Green Peas for Breakfast",
-      desc: "Experimental agency portfolio focued on bold typography, custom micro-interactions, and unique brand identity.",
-      image: img3,
-      link: "greenpeasforbreakfast.com",
-    },
+  title: "Huly",
+  desc: "High-performance SaaS landing page featuring a technical dark-mode interface and fluid motion design.",
+  image: img1,
+  link: "https://huly.io",
+},
+{
+  title: "Grainne Morton",
+  desc: "Custom grid-based luxury storefront focused on minimalist UI and high-end product storytelling.",
+  image: img2,
+  link: "https://grainnemorton.co.uk",
+},
+{
+  title: "Green Peas for Breakfast",
+  desc: "Experimental agency portfolio focused on bold typography, custom micro-interactions, and unique brand identity.",
+  image: img3,
+  link: "https://greenpeasforbreakfast.com",
+},
+
    
   ];
 
   return (
     <section
-      id="tech-stack"
+      id="work"
       className="max-w-7xl mx-auto px-4 md:px-6 py-7 md:py-10"
     >
       {/* Header (unchanged) */}

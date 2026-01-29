@@ -9,10 +9,14 @@ const PlanCard = ({
   buttonText = "Get Started",
   badge,
   highlighted = false,
+  timeline = "2–3 weeks",
+  fastTimeline = "3–5 days"
 }) => {
   const [fast, setFast] = useState(false);
 
   const price = fast ? basePrice + fastPrice : basePrice;
+  const activeTimeline = fast ? fastTimeline : timeline;
+
 
   return (
     <div className="relative group">
@@ -77,6 +81,19 @@ const PlanCard = ({
             <span className="text-white ml-2">starting</span>
           </div>
         </div>
+
+        {/* Timeline */}
+<div className="mb-6 p-3 bg-zinc-800/30 rounded-lg">
+  <p className="text-white text-sm font-medium">Delivery Timeline</p>
+  <p
+    className={`text-sm mt-1 transition-colors ${
+      fast ? "text-[#DAA520]" : "text-zinc-400"
+    }`}
+  >
+    {activeTimeline}
+  </p>
+</div>
+
 
         {/* Features */}
         <ul className="space-y-3 mb-8 text-sm text-white">
