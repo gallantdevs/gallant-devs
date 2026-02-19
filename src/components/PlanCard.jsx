@@ -16,6 +16,11 @@ const PlanCard = ({
 
   const price = fast ? basePrice + fastPrice : basePrice;
   const activeTimeline = fast ? fastTimeline : timeline;
+  const formatter = new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  });
 
 
   return (
@@ -74,27 +79,13 @@ const PlanCard = ({
           </div>
 
           {/* Price */}
-         {/* Price */}
-<div className="flex items-baseline mb-6">
-  {title === "Basic" && !fast ? (
-    <>
-      <span className="text-3xl md:text-4xl font-bold text-white">
-        $100 – $500
-      </span>
-    </>
-  ) : (
-    <>
-      <span className="text-3xl md:text-4xl font-bold text-white">
-        ${price.toLocaleString()}
-      </span>
-      {title === "Basic"?(""):(
-        <>
-        <span className="text-white ml-2">starting</span>
-        </>
-      )}
-    </>
-  )}
-</div>
+        {/* Price */}
+        <div className="flex items-baseline mb-6">
+          <span className="text-3xl md:text-4xl font-bold text-white">
+            {title === "Basic" && !fast ? formatter.format(basePrice) : formatter.format(price)}
+          </span>
+          <span className="text-white ml-2">starting</span>
+        </div>
         </div>
 
         {/* Timeline */}
