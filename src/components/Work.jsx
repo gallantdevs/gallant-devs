@@ -2,12 +2,26 @@ import { useRef } from "react";
 import img1 from "../../public/111a.png";
 import img2 from "../../public/222a.png";
 import img3 from "../../public/333a.png";
+import img4 from "../../public/portfolio_11.png";
+import img5 from "../../public/portfolio_12.png";
 import { FiArrowLeft, FiArrowRight, FiExternalLink } from "react-icons/fi";
 
 export default function Work() {
   const scrollRef = useRef(null);
 
   const projects = [
+    {
+  title: "Roy Fitness Gym",
+  desc: "High-impact gym landing page featuring a bold dark-mode interface and smooth motion design.",
+  image: img4,
+  link: "https://roy-fitness-gym-tg0.caffeine.xyz/",
+},
+{
+  title: "Gallant Jewellery",
+  desc: "High-end jewellery website crafted for luxury presentation and seamless browsing.",
+  image: img5,
+  link: "https://darkslategray-tapir-457732.hostingersite.com/",
+},
     {
   title: "Huly",
   desc: "High-performance SaaS landing page featuring a technical dark-mode interface and fluid motion design.",
@@ -87,7 +101,7 @@ export default function Work() {
       <img
         src={project.image}
         alt={project.title}
-        className="h-full w-full object-contain
+        className="h-full w-full object-cover
         transition-transform duration-700 ease-out
         group-hover:scale-110"
       />
